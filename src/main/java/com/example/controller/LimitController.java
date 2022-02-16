@@ -26,4 +26,9 @@ public class LimitController {
     public ResponseEntity<List<Limit>> findAll() {
         return new ResponseEntity<>(limitService.findAll(), HttpStatus.OK);
     }
+
+    @GetMapping("/get")
+    public ResponseEntity<Limit> getLimit() {
+        return new ResponseEntity<>(limitService.getLimit(), HttpStatus.OK);
+    }
 }
